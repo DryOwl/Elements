@@ -157,19 +157,32 @@ public class GameManager : MonoBehaviour {
                 {
                     if (Input.GetKeyDown(MagicKey[i]))
                     {
-                        chargingTime = Time.time;
+                        if (registeredGem[i].magic_1 == "FireBall")
+                        {
+                            chargingTime = Time.time;
+                        }
+                        else
+                        {
+                            UseMagic(i, registeredGem[i].magic_1, chargingLevel);
+                        }
+
                     }
                     else if (Input.GetKey(MagicKey[i]))
                     {
-                        chargingLevel = (int)(Time.time - chargingTime);
-                        if(registeredGem[i].magic_1 == "WindCutter")
+                        if (registeredGem[i].magic_1 == "WindCutter")
                         {
                             UseMagic(i, registeredGem[i].magic_1);
+                        } else if (registeredGem[i].magic_1 == "FireBall")
+                        {
+                            chargingLevel = (int)(Time.time - chargingTime);
                         }
                     }
                     else if (Input.GetKeyUp(MagicKey[i]))
                     {
-                        UseMagic(i, registeredGem[i].magic_1, chargingLevel);
+                        if (registeredGem[i].magic_1 == "FireBall")
+                        {
+                            UseMagic(i, registeredGem[i].magic_1, chargingLevel);
+                        }
                     }
                 }
             }
