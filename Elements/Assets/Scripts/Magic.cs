@@ -11,7 +11,7 @@ public class Magic : MonoBehaviour {
     public string magicName;
     public float moveSpeed;
     
-    enum Gems { Fire, Aqua, Wind, Earth, Shining, Dark, Ice, Yellow }
+    enum Gems { Fire, Aqua, Wind, Earth, Shining, Dark, Ice, Eletric }
 
     public GameObject FireBall;
     public GameObject WaterShower;

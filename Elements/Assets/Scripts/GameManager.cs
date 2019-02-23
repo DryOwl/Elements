@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour {
     public Gem Shining = new Gem(4, "", "");
     public Gem Dark = new Gem(5, "", "");
     public Gem Ice = new Gem(6, "", "");
-    public Gem Yellow = new Gem(7, "", "");
+    public Gem Eletric = new Gem(7, "", "");
     private Gem[] registeredGem = new Gem[4];
     
 
